@@ -1,5 +1,5 @@
 class Genre < ActiveRecord::Base
   # Remember to create a migration!
-  has_one :catalog
-  has_many :songs, through: :catalog
+  has_many :catalogs
+  has_many :songs, through: :catalogs
 end

@@ -14,11 +14,11 @@
     <input id="song_author" type="text" name="song[author]" value="<%= @song.author %>" />
     </li>
   <h3>Add genres</h3>
-<form>
+
   <%@genres.each do |genre|%>
-<input type="checkbox" name="genre" value="<%=genre.title%>"><%=genre.title%><br>
-<%end%>
-</form>
+    <input type="checkbox" name="genre[]" value="<%=genre.title%>"><%=genre.title%><br>
+  <%end%>
+
 
 
 

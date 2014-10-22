@@ -1,5 +1,6 @@
 class Catalog < ActiveRecord::Base
   # Remember to create a migration!
-  has_many :songs
-  has_many :genres
+  belongs_to :song
+  belongs_to :genre
+
 end

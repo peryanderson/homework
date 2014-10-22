@@ -1,5 +1,5 @@
 class Song < ActiveRecord::Base
   # Remember to create a migration!
-  has_one :catalog
-  has_many :genres, through: :catalog
+  has_many :catalogs
+  has_many :genres, through: :catalogs
 end
