@@ -1,0 +1,38 @@
+<h1>Edit a Song</h1>
+  <form action="/songs/<%= @song.id %>" method="POST">
+    <input type="hidden" name="_method" value="PUT" />
+    <li>
+    <label for="song_title">Street</label>
+    <input id="song_title" type="text" name="song[title]" value="<%= @song.title %>" />
+    </li>
+    <li>
+    <label for="song_singer">Street</label>
+    <input id="song_singer" type="text" name="song[singer]" value="<%= @song.singer %>" />
+    </li>
+    <li>
+    <label for="song_author">Street</label>
+    <input id="song_author" type="text" name="song[author]" value="<%= @song.author %>" />
+    </li>
+  <h3>Add genres</h3>
+<form>
+  <%@genres.each do |genre|%>
+<input type="checkbox" name="genre" value="<%=genre.title%>"><%=genre.title%><br>
+<%end%>
+</form>
+
+
+
+  <input type="submit" value="Update Song" />
+  </form>
+<h2>
+
+
+
+
+
+
+<form action="/songs/<%= @song.id %>" method="POST">
+    <input type="hidden" name="_method" value="DELETE" />
+    <input type="submit" value="Delete Song" />
+  </form>
+

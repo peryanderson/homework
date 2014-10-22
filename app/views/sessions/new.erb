@@ -1,0 +1,17 @@
+<h1>Login</h1>
+<form action='/sessions' method="post">
+  <input type="text" name="username" placeholder="Username" />
+  <input type="password" name="password" placeholder="Password"/>
+  <input type="submit" value="Login" />
+</form>
+<%= @message %>
+<form action="/users/new" method="get">
+  <input type="submit" value="Create an Account"
+         name="create"/>
+</form>
+<% if authenticated? %>
+<form action="/logout" method="get">
+  <input type="submit" value="Logout"
+         name="logout"/>
+</form>
+<%end%>
